@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class Section extends Component {
-  render() {
-    return <div>Section</div>;
-  }
-}
+const Section = () => {
+  return <div>section</div>;
+};
+
+export default Section;

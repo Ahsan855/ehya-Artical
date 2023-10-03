@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class Bannar extends Component {
-  render() {
-    return <div>Bannar</div>;
-  }
-}
+const Bannar = () => {
+  return <div>bannar</div>;
+};
+
+export default Bannar;
