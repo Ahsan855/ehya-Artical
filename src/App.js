@@ -8,6 +8,7 @@ import Pricing from "./Pages/Pricing/Pricing";
 import Signup from "./Pages/SignUp/Signup";
 import Faq from "./Pages/Faq/Faq";
 import Login from "./Pages/Login/login";
+import Footer from "./Pages/Footer/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
+      <Footer />
     </div>
   );
 }

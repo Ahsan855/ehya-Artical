@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CardGrid from "./CardGrid";
 import icons from "../../images/icon/Icons.png";
+import shape from "../../images/Wave.svg";
 
 const Cards = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -13,8 +14,8 @@ const Cards = () => {
       });
   }, []);
   return (
-    <>
-      <div className="grid lg:grid-cols-3 gap-5 md:grid-cols-2 grid-cols-1 px-5 md:px-16">
+    <div className="">
+      <div className="grid py-5 max-w-7xl mx-auto lg:grid-cols-3 gap-5 md:grid-cols-2 grid-cols-1 px-5 md:px-16">
         {allProducts?.map((data) => (
           <CardGrid key={data._id} data={data}></CardGrid>
         ))}
@@ -29,7 +30,8 @@ const Cards = () => {
           />
         </button>
       </div>
-    </>
+      <img className="w-full" src={shape} alt="" />
+    </div>
   );
 };
 

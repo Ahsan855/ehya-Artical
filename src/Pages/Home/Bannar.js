@@ -9,9 +9,10 @@ const Bannar = () => {
   };
   return (
     <div>
-      <img className="absolute" src={oval} alt="" />
-      <div>
-        <div className="hero lg:min-h-screen py-5">
+      <div className="relative">
+        <img className="absolute top-18 lg:block hidden" src={oval} alt="" />
+
+        <div className="hero lg:min-h-screen py-5 md:px-10">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <img className="hidden lg:block" src={bannarImage} alt="" />
 
