@@ -3,77 +3,56 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../images/Logo.png";
 
 const Navbar = () => {
-  // const [user, loading, error] = useAuthState(auth);
-  // const logout = () => {
-  //   signOut(auth);
-  // };
   const menuItem = (
     <>
       <li>
-        <NavLink className="my-2 mr-5 font-semibold" to="/">
+        <NavLink
+          className=" px-3 mr-5 text-primary font-semibold hover:bg-secondary hover:text-white"
+          to="/"
+        >
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink className="my-2 mr-5  font-semibold" to="/blog">
-          Blogs
-        </NavLink>
-      </li>
-      <li>
-        <NavLink className="my-2 mr-5 text-error" to="/contact">
-          Contact
+        <NavLink
+          className="px-3 mr-5  text-primary font-semibold  hover:bg-secondary hover:text-white"
+          to="/articles"
+        >
+          Articles
         </NavLink>
       </li>
       <li>
         <NavLink
-          className="my-2 mr-5 text-primary  font-semibold"
-          to="/portfolio"
+          className="px-3 mr-5 text-primary font-semibold hover:bg-secondary hover:text-white"
+          to="/pages"
         >
-          Portfolio
+          Pages
         </NavLink>
       </li>
-
-      {/* {user && (
-        <li>
-          <NavLink
-            className="my-2 mr-5  text-secondary font-semibold"
-            to="/dashboard"
-          >
-            Dashboard
-          </NavLink>
-        </li>
-      )}
-
-      {user && (
-        <li>
-          <button
-            onClick={logout}
-            className="my-2 mr-5   text-secondary font-semibold"
-          >
-            Logout
-          </button>
-        </li>
-      )} 
-       {!user && (
-        <>
-          <li>
-            <NavLink
-              className="my-2 mr-5   text-secondary font-semibold  "
-              to="/login"
-            >
-              Login
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className="my-2 mr-5   text-secondary font-semibold "
-              to="/signup"
-            >
-              Signup
-            </NavLink>
-          </li>
-        </>
-      )} */}
+      <li>
+        <NavLink
+          className="px-3 mr-5 text-primary font-semibold hover:bg-secondary hover:text-white"
+          to="/pricing"
+        >
+          Pricing
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className="mr-5 px-3 text-primary font-semibold hover:bg-secondary hover:text-white"
+          to="/faq"
+        >
+          Faq
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/login"
+          className=" px-5 py-2 bg-white border hover:text-white hover:bg-[#1565D8] border-[#1565D8] text-[16px] rounded-full font-bold text-[#1565D8]"
+        >
+          Sign in
+        </NavLink>
+      </li>
     </>
   );
 
