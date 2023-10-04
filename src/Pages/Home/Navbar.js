@@ -1,49 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../images/Logo.png";
+import arrow from "../../images/icon/angle-down.png";
 
 const Navbar = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
   const menuItem = (
     <>
-      <li>
-        <NavLink
-          className=" px-3 mr-5 text-primary font-semibold hover:bg-secondary hover:text-white"
-          to="/"
-        >
-          Home
-        </NavLink>
+      <li className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500">
+        <NavLink to="/">Home</NavLink>
       </li>
-      <li>
-        <NavLink
-          className="px-3 mr-5  text-primary font-semibold  hover:bg-secondary hover:text-white"
-          to="/articles"
-        >
-          Articles
-        </NavLink>
+      <li className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500">
+        <NavLink to="/articles">Articles</NavLink>
       </li>
-      <li>
-        <NavLink
-          className="px-3 mr-5 text-primary font-semibold hover:bg-secondary hover:text-white"
-          to="/pages"
-        >
+
+      <li className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500">
+        <NavLink to="/pages" className="relative" onClick={toggleMenu}>
           Pages
+          <img className="ml-[-2px]" src={arrow} alt="" />
+          {isMenuOpen && (
+            <div className="absolute top-6 mt-2 bg-white text-primary rounded shadow-lg">
+              {/* Your menu items go here */}
+              <ul>
+                <li className="p-2">Article 1</li>
+                <li className="p-2">Article 2</li>
+                <li className="p-2">Article 3</li>
+              </ul>
+            </div>
+          )}
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          className="px-3 mr-5 text-primary font-semibold hover:bg-secondary hover:text-white"
-          to="/pricing"
-        >
-          Pricing
-        </NavLink>
+
+      <li className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500">
+        <NavLink to="/pricing">Pricing</NavLink>
       </li>
-      <li>
-        <NavLink
-          className="mr-5 px-3 text-primary font-semibold hover:bg-secondary hover:text-white"
-          to="/faq"
-        >
-          Faq
-        </NavLink>
+      <li className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500">
+        <NavLink to="/faq">Faq</NavLink>
       </li>
       <li>
         <NavLink
