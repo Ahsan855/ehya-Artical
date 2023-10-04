@@ -10,7 +10,7 @@ const Bannar = () => {
             <img className="hidden lg:block" src={bannarImage} alt="" />
 
             <div>
-              <h1 className="text-[31px] md:text-[48px] sm:px-5 lg:text-[56px] text-center lg:text-left lg:leading-[68px] text-primary font-bold">
+              <h1 className="sm:text-3xl md:text-2xl sm:px-5 lg:text-6xl text-center lg:text-left lg:leading-[68px] text-primary font-bold">
                 Read the most <br /> interesting articles
               </h1>
               <p className="leading-[36px]  text-[20px] text-center lg:text-left text-primary font-normal sm:px-6">
@@ -33,13 +33,13 @@ const Bannar = () => {
                     fill="#959EAD"
                   />
                 </svg>
-
                 <input
                   type="text"
                   placeholder="Search article"
-                  className="input input-bordered w-full pl-12 italic font-bold leading-[21.79px]"
+                  className=" input input-bordered hover:border-blue-300 w-full pl-12 italic font-bold leading-[21.79px] "
                 />
-                <button className="w-10/12 sm:text-center md:w-[94px] h-[40px] bg-[#1565D8] text-[16px] font-bold text-white mt-5 md:absolute md:mt-0 top-1 right-2 rounded-lg">
+
+                <button className="w-full px-5 sm:text-center md:w-[94px] h-[40px] bg-[#1565D8] text-[16px] font-bold text-white mt-5 md:absolute md:mt-0 top-1 right-2 rounded-lg">
                   Search
                 </button>
               </div>
@@ -48,13 +48,13 @@ const Bannar = () => {
                 <p className=" font-bold md:inline italic text-[16px] text-[#5A7184] mr-4">
                   Popular Tags :
                 </p>
-                <button className="px-3 py-2 mx-2 text-[#1565D8] text-sm italic font-bold bg-[#1565D8] bg-opacity-10 rounded-md">
+                <button className="px-3 py-2 mx-2 my-2 text-[#1565D8] text-sm italic font-bold bg-[#1565D8] hover:bg-opacity-20 bg-opacity-10 rounded-md">
                   Design
                 </button>
-                <button className="px-3 py-2 mx-2 text-[#1565D8] text-sm italic font-bold bg-[#1565D8] bg-opacity-10 rounded-md">
+                <button className="px-3 py-2 mx-2 my-2 text-[#1565D8] text-sm italic font-bold bg-[#1565D8] hover:bg-opacity-20 bg-opacity-10 rounded-md">
                   User Experience
                 </button>
-                <button className="px-3 py-2 mx-2 text-[#1565D8] text-sm italic font-bold bg-[#1565D8] bg-opacity-10 rounded-md">
+                <button className="px-3 py-2 mx-2 my-2 hover:bg-opacity-20 text-[#1565D8] text-sm italic font-bold bg-[#1565D8] bg-opacity-10 rounded-md">
                   User Interfaces
                 </button>
               </div>

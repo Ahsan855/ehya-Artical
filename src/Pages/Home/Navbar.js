@@ -1,9 +1,6 @@
-// import { signOut } from "firebase/auth";
 import React from "react";
-// import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../images/Logo.png";
-// import auth from "../../firebase.init";
 
 const Navbar = () => {
   // const [user, loading, error] = useAuthState(auth);
@@ -82,7 +79,7 @@ const Navbar = () => {
 
   return (
     <header className="z-50 bg-white shadow-2xl sticky top-0">
-      <div className=" ">
+      <div>
         <div className=" max-w-7xl mx-auto">
           <div className="navbar bg-base-100">
             <div className="navbar-start">
