@@ -43,7 +43,7 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/login"
-          className=" px-5 py-2 bg-white border hover:text-white hover:bg-[#1565D8] border-[#1565D8] text-[16px] rounded-full font-bold text-[#1565D8]"
+          className=" px-6 py-2 bg-white border hover:text-white hover:bg-[#1565D8] border-[#1565D8] text-[16px] rounded-full font-bold text-[#1565D8]"
         >
           Sign in
         </NavLink>
@@ -52,10 +52,10 @@ const Navbar = () => {
   );
 
   return (
-    <header className="z-50 bg-white shadow-2xl sticky top-0">
+    <header className="z-50 bg-[#F9FCFF] sticky top-0">
       <div>
-        <div className=" max-w-7xl mx-auto">
-          <div className="navbar bg-base-100">
+        <div className=" max-w-7xl mx-auto bg-[#F9FCFF]">
+          <div className="navbar">
             <div className="navbar-start">
               <div className="dropdown">
                 <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -81,7 +81,7 @@ const Navbar = () => {
                   {menuItem}
                 </ul>
               </div>
-              <Link to="/" className="btn btn-ghost text-xl uppercase">
+              <Link to="/">
                 <img src={logo} alt="" />
               </Link>
             </div>

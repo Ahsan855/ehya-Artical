@@ -1,5 +1,6 @@
 import bannarImage from "../../images/Bannar_Live_chat.svg";
 import React, { useState } from "react";
+import oval from "../../images/Oval.svg";
 
 const Bannar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -8,6 +9,7 @@ const Bannar = () => {
   };
   return (
     <div>
+      <img className="absolute" src={oval} alt="" />
       <div>
         <div className="hero lg:min-h-screen py-5">
           <div className="hero-content flex-col lg:flex-row-reverse">
@@ -48,7 +50,7 @@ const Bannar = () => {
                   />
 
                   {isMenuOpen && (
-                    <div className="absolute mt-2 bg-white text-primary rounded shadow-lg">
+                    <div className="absolute mt-2 bg-white rounded shadow-lg text-primary">
                       {/* Your menu items go here */}
                       <ul>
                         <li className="p-2">Article 1</li>
@@ -59,7 +61,7 @@ const Bannar = () => {
                   )}
                 </div>
 
-                <button className="w-full px-5 sm:text-center md:w-[94px] h-[40px] bg-[#1565D8] text-[16px] font-bold text-white mt-5 md:absolute md:mt-0 top-1 right-2 rounded-lg">
+                <button className="w-full px-5 sm:text-center border-2  hover:text-[#1565D8] hover:bg-white md:w-[94px] h-[40px] bg-[#1565D8] text-[16px] font-bold text-white mt-5 md:absolute md:mt-0 top-1 right-2 rounded-lg">
                   Search
                 </button>
               </div>
@@ -68,13 +70,13 @@ const Bannar = () => {
                 <p className=" font-bold md:inline italic text-[16px] text-[#5A7184] mr-4">
                   Popular Tags :
                 </p>
-                <button className="px-3 py-2 mx-2 my-2 text-[#1565D8] text-sm italic font-bold bg-[#1565D8] hover:bg-opacity-20 bg-opacity-10 rounded-md">
+                <button className="px-3 transition duration-300 ease-in-out transform hover:scale-105 py-2 mx-2 my-2 text-[#1565D8] text-sm italic font-bold bg-[#1565D8] hover:bg-opacity-20 bg-opacity-10 rounded-md">
                   Design
                 </button>
-                <button className="px-3 py-2 mx-2 my-2 text-[#1565D8] text-sm italic font-bold bg-[#1565D8] hover:bg-opacity-20 bg-opacity-10 rounded-md">
+                <button className="px-3 transition duration-300 ease-in-out transform hover:scale-105 py-2 mx-2 my-2 text-[#1565D8] text-sm italic font-bold bg-[#1565D8] hover:bg-opacity-20 bg-opacity-10 rounded-md">
                   User Experience
                 </button>
-                <button className="px-3 py-2 mx-2 my-2 hover:bg-opacity-20 text-[#1565D8] text-sm italic font-bold bg-[#1565D8] bg-opacity-10 rounded-md">
+                <button className="px-3 transition duration-300 ease-in-out transform hover:scale-105  py-2 mx-2 my-2 hover:bg-opacity-20 text-[#1565D8] text-sm italic font-bold bg-[#1565D8] bg-opacity-10 rounded-md">
                   User Interfaces
                 </button>
               </div>
