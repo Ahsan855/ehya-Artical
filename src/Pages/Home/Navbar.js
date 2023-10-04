@@ -1,45 +1,42 @@
-import { signOut } from "firebase/auth";
+// import { signOut } from "firebase/auth";
 import React from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
+// import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../images/Logo.png";
-import auth from "../../firebase.init";
+// import auth from "../../firebase.init";
 
 const Navbar = () => {
-  const [user, loading, error] = useAuthState(auth);
-  const logout = () => {
-    signOut(auth);
-  };
+  // const [user, loading, error] = useAuthState(auth);
+  // const logout = () => {
+  //   signOut(auth);
+  // };
   const menuItem = (
     <>
       <li>
-        <NavLink className="my-2 mr-5 text-secondary font-semibold" to="/">
+        <NavLink className="my-2 mr-5 font-semibold" to="/">
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink className="my-2 mr-5 text-secondary font-semibold" to="/blog">
+        <NavLink className="my-2 mr-5  font-semibold" to="/blog">
           Blogs
         </NavLink>
       </li>
       <li>
-        <NavLink
-          className="my-2 mr-5  text-secondary font-semibold"
-          to="/contact"
-        >
+        <NavLink className="my-2 mr-5 text-error" to="/contact">
           Contact
         </NavLink>
       </li>
       <li>
         <NavLink
-          className="my-2 mr-5  text-secondary font-semibold"
+          className="my-2 mr-5 text-primary  font-semibold"
           to="/portfolio"
         >
           Portfolio
         </NavLink>
       </li>
 
-      {user && (
+      {/* {user && (
         <li>
           <NavLink
             className="my-2 mr-5  text-secondary font-semibold"
@@ -59,9 +56,8 @@ const Navbar = () => {
             Logout
           </button>
         </li>
-      )}
-
-      {!user && (
+      )} 
+       {!user && (
         <>
           <li>
             <NavLink
@@ -80,7 +76,7 @@ const Navbar = () => {
             </NavLink>
           </li>
         </>
-      )}
+      )} */}
     </>
   );
 
@@ -114,10 +110,7 @@ const Navbar = () => {
                   {menuItem}
                 </ul>
               </div>
-              <Link
-                to="/"
-                className="btn btn-ghost  text-secondary text-xl uppercase"
-              >
+              <Link to="/" className="btn btn-ghost text-xl uppercase">
                 <img src={logo} alt="" />
               </Link>
             </div>
