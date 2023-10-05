@@ -7,14 +7,10 @@ import shape from "../../images/Wave.svg";
 const FooterTop = () => {
   return (
     <>
-      <div className="relative">
-        <img
-          className="absolute -top-28 left-0 w-full h-auto"
-          src={shape}
-          alt=""
-        />
+      <div>
+        <img className=" w-full h-auto" src={shape} alt="" />
         <div className="bg-[#0D2436]">
-          <section className=" pb-10 container mx-auto px-5 flex flex-row md:flex-wrap">
+          <section className=" py-10 container mx-auto px-5  flex flex-col md:flex-row md:flex-wrap">
             <div className="w-1/2">
               <h1 className="text-white font-bold py-5 text-4xl">
                 Get our stories delivered From us <br /> to your inbox weekly.
@@ -27,7 +23,7 @@ const FooterTop = () => {
                   placeholder="Your email"
                   className="border rounded-md py-2 w-full md:w-auto px-3 focus:outline-none focus:border-blue-500"
                 />
-                <button className="px-5 py-2 w-full md:w-auto  text-white hover:text-blue-500 text-sm font-bold bg-[#1565D8] hover:bg-white transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg rounded-md">
+                <button className="px-5 py-2 w-full md:w-auto hover:border-blue-500 hover:border-2  text-white hover:text-blue-500 text-sm font-bold bg-[#1565D8] hover:bg-white transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg rounded-md">
                   Get Started
                 </button>
               </div>
@@ -48,7 +44,7 @@ const FooterTop = () => {
                 </p>
               </div>
               <img
-                className="absolute top-[50px] left-[170px] z-[-10]"
+                className="absolute top-[50px] md:left-[45px] z-[-10]"
                 src={shape1}
                 alt=""
               />

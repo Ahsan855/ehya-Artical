@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import headerImage from "../../images/cardDetails/ales-nesetril-Im7lZjxeLhg-unsplash 1.png";
 import Blog from "./Blog";
+import Allcomment from "./Allcomment";
 
 const BlogDetail = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -12,14 +13,11 @@ const BlogDetail = () => {
         setAllProducts(data);
       });
   }, []);
-  // const toggleVisibleCards = () => {
-  //   setAllProducts((prevState) => (prevState === 6 ? 9 : 6));
-  // };
 
   return (
-    <div>
-      <div className="container mx-auto py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div className="container mx-auto max-w-7xl">
+      <div className=" py-10">
+        <div className="grid max-w-7xl mx-auto grid-cols-1 md:grid-cols-2 gap-5 px-5">
           <div>
             <p className="mb-5">Home / Blog / Article title</p>
             <img src={headerImage} alt="" />
@@ -54,6 +52,7 @@ const BlogDetail = () => {
               lectus proin. Sapien faucibus et molestie ac feugiat sed lectus
               vestibulum.
             </p>
+            <Allcomment />
           </div>
           <div>
             <h2 className="text-primary font-medium text-xl px-5 pb-3">
@@ -64,9 +63,6 @@ const BlogDetail = () => {
                 {allProducts
                   ?.map((data) => <Blog key={data._id} data={data}></Blog>)
                   .slice(0, 6)}
-                {/* <button onClick={toggleVisibleCards}>
-                  {allProducts === 6 ? "Show More" : "Show Less"}
-                </button> */}
               </div>
             </div>
             <div className="mt-5">
