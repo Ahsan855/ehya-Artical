@@ -12,9 +12,13 @@ const CardGrid = ({ data }) => {
     verify,
     date,
   } = data;
+
   return (
     <div>
-      <div key={_id} className="bg-white rounded shadow-md flex flex-col">
+      <div
+        key={_id}
+        className="bg-white rounded shadow-md transform hover:cursor-pointer hover:scale-105 transition-transform duration-300 flex flex-col"
+      >
         <img src={image} alt="" className="w-full object-cover mb-2 rounded" />
         <div className="px-8 pb-5">
           <h2 className="text-3xl text-primary font-bold">{contentName}</h2>

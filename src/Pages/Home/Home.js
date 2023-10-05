@@ -1,12 +1,14 @@
 import React from "react";
 import Bannar from "./Bannar";
-import Section from "./Section";
+import FooterTop from "../Footer/FooterTop";
+import Cards from "../Cards/Cards";
 
 const Home = () => {
   return (
     <div>
       <Bannar />
-      <Section />
+      <Cards />
+      <FooterTop />
     </div>
   );
 };
