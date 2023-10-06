@@ -5,9 +5,10 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { NavLink, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Signup = () => {
-  const [login, setLogin] = useState(false);
+  const [signIn, setSignout] = useState(false);
 
   const history = useNavigate();
 
@@ -19,35 +20,32 @@ const Signup = () => {
     if (type === "signup") {
       createUserWithEmailAndPassword(database, email, password)
         .then((data) => {
-          console.log(data, "authData");
+          toast("Wellcome to Home page");
           history("/home");
         })
         .catch((err) => {
-          alert(err.code);
-          setLogin(true);
+          toast("Opps!");
+          setSignout(true);
         });
     } else {
       signInWithEmailAndPassword(database, email, password)
         .then((data) => {
           console.log(data, "authData");
-          history("/home");
+          history("/");
         })
         .catch((err) => {
-          alert(err.code);
+          toast("Opps! you have already an account..");
         });
     }
   };
 
-  const handleReset = () => {
-    history("/reset");
-  };
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg shadow-md w-full sm:w-96">
         <h2 className="text-4xl text-primary text-center font-semibold mb-6">
-          {login ? "Sign In" : "Sign Up"}
+          {signIn ? "Sign In" : "Sign Up"}
         </h2>
-        <form onSubmit={(e) => handleSubmit(e, login ? "signin" : "signup")}>
+        <form onSubmit={(e) => handleSubmit(e, signIn ? "signin" : "signup")}>
           <div className="mb-4">
             <label
               htmlFor="name"
@@ -92,13 +90,7 @@ const Signup = () => {
               className="w-full text-primary border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
             />
           </div>
-          <a
-            href="#"
-            onClick={handleReset}
-            className="text-blue-500 hover:underline"
-          >
-            Forgot Password?
-          </a>
+
           <br />
           <button
             type="submit"
@@ -114,7 +106,7 @@ const Signup = () => {
             className=" px-3 mr-5  text-[#1565D8] font-bold text-[14px] hover:underline"
             to="/login"
           >
-            {login ? "Register" : "Login now"}
+            {signIn ? "Register now" : "Login now"}
           </NavLink>
         </form>
       </div>

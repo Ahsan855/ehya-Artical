@@ -19,7 +19,7 @@ const Login = () => {
     if (type === "login") {
       createUserWithEmailAndPassword(database, email, password)
         .then((data) => {
-          console.log(data, "authData");
+          toast("wellcome.. home");
           history("/home");
         })
         .catch((err) => {
@@ -29,11 +29,11 @@ const Login = () => {
     } else {
       signInWithEmailAndPassword(database, email, password)
         .then((data) => {
-          console.log(data, "authData");
+          toast("Wellcome To Home 🥰");
           history("/home");
         })
         .catch((err) => {
-          toast("Wellcome to...");
+          toast("Wrong .... Please try Correct 🔥");
         });
     }
   };
