@@ -6,7 +6,7 @@ import cercleIcon from "../../images/footer/Icon.png";
 const Footer = () => {
   return (
     <div className="bg-[#0D2436] py-10">
-      <div className="border-[#1A3245] w-11/12 mx-auto border-b-2"></div>
+      <div className="border-[#1A3245] w-5/6 mx-auto border-b-2"></div>
       <div className="flex md:flex-row flex-col-reverse items-center justify-center lg:gap-x-20 max-w-7xl mx-auto">
         <div className="py-5 md:py-0 text-center px-10">
           <img className="w-1/2 mx-auto md:mx-0" src={logo} alt="" />
@@ -98,7 +98,9 @@ const Footer = () => {
 
       <div className="text-center pt-5 bg-[#0D2436] text-[#959EAD]">
         <img className="mx-auto my-5" src={loveImage} alt="" />
-        <span>Copyright © 2023. Crafted with love.</span>
+        <p className="text-center font-bold text-[16px] italic">
+          Copyright © 2023. Crafted with love.
+        </p>
       </div>
     </div>
   );

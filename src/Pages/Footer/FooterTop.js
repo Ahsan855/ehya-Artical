@@ -7,10 +7,14 @@ import shape from "../../images/Wave.svg";
 const FooterTop = () => {
   return (
     <>
-      <div>
-        <img className=" w-full h-auto" src={shape} alt="" />
-        <div className="bg-[#0D2436]">
-          <section className=" py-10 container mx-auto px-5 flex md:flex-col-reverse flex-col lg:flex-row md:flex-wrap">
+      <div className=" bg-[#0D2436]">
+        <div className="relative">
+          <img
+            className="absolute -top-10 md:-top-20 lg:-top-28 left-0 w-full h-auto"
+            src={shape}
+            alt=""
+          />
+          <div className=" py-12 container mx-auto px-5 flex md:flex-col-reverse flex-col lg:flex-row md:flex-wrap">
             <div className="lg:w-1/2 mt-36 lg:mt-5  mx-auto">
               <h1 className="text-white text-center lg:text-left font-bold py-5 text-4xl">
                 Get our stories delivered From us <br /> to your inbox weekly.
@@ -57,7 +61,7 @@ const FooterTop = () => {
                 alt=""
               />
             </div>
-          </section>
+          </div>
         </div>
       </div>
     </>
