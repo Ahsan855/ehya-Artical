@@ -28,7 +28,7 @@ const FooterTop = () => {
                     Get Started
                   </button>
                 </div>
-                <h1 className=" text-xl px-5 py-5 text-center lg:text-left text-[#5A7184] font-bold">
+                <h1 className=" text-xl py-5 text-center lg:text-left text-[#5A7184] font-bold">
                   Get a response tomorrow if you submit by 9pm today. If we
                   received after 9pm will get a reponse the following day.
                 </h1>

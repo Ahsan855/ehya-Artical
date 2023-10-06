@@ -17,9 +17,12 @@ module.exports = {
 
           error: "#F87272",
         },
-        fontFamily: {
-          opens: ["Open Sans", "sans-serif"],
-          robotoTitle: ["Roboto", "sans-serif"],
+
+        extend: {
+          fontFamily: {
+            subTitle: ["Open Sans", "sans-serif"],
+            Title: ["Roboto", "sans-serif"],
+          },
         },
       },
     ],

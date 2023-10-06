@@ -61,7 +61,7 @@ const Footer = () => {
               <a className="link link-hover">UI Kit</a>
             </li>
           </div>
-
+          <div className="md:block lg:hidden"></div>
           <div>
             <header className="font-bold py-5 text-lg text-[#5A7184]">
               Company
