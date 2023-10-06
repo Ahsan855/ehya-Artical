@@ -8,17 +8,6 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
-  /*   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [signIn] = useState(false);
-  const handleLogin = () => {
-    // Implement your login logic here
-    setIsLoggedIn(true);
-  };
-
-  const handleLogout = () => {
-    // Implement your logout logic here
-    setIsLoggedIn(false);
-  }; */
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleToggle = () => {
