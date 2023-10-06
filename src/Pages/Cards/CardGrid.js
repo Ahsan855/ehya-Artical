@@ -28,7 +28,11 @@ const CardGrid = ({ data }) => {
       >
         <img src={image} alt="" className="w-full object-cover mb-2 rounded" />
         <div className="px-8 pb-5">
-          <h2 className="text-3xl text-primary font-bold">{titleShorts()}</h2>
+          <h2
+            className={`text-3xl text-primary font-bold hove:text-[${contentName}]`}
+          >
+            {titleShorts()}
+          </h2>
           <p className="text-primary py-6 text-lg">{shortDescription}</p>
           <div className="flex items-center mt-auto justify-between">
             <div className="flex flex-row">

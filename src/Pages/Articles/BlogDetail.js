@@ -4,13 +4,13 @@ import Blog from "./Blog";
 import Allcomment from "./Allcomment";
 
 const BlogDetail = () => {
-  const [allProducts, setAllProducts] = useState([]);
+  const [blogs, setAllBlogs] = useState([]);
 
   useEffect(() => {
     fetch("fakeData.json")
       .then((res) => res.json())
       .then((data) => {
-        setAllProducts(data);
+        setAllBlogs(data);
       });
   }, []);
 
@@ -18,11 +18,13 @@ const BlogDetail = () => {
     <div className="container mx-auto max-w-7xl">
       <div className=" py-10">
         <div className="grid max-w-7xl mx-auto grid-cols-1 md:grid-cols-2 gap-5 px-5">
+          {/* Edication section */}
           <div>
             <p className="mb-5">Home / Blog / Article title</p>
+            {/* Blog image */}
             <img src={headerImage} alt="" />
             <h2 className="text-blue-500 text-lg tracking-wider my-5">
-              EDICATION
+              EDUCATION
             </h2>
             <h1 className="text-primary font-medium text-2xl pb-5">
               Help children get better education
@@ -52,19 +54,23 @@ const BlogDetail = () => {
               lectus proin. Sapien faucibus et molestie ac feugiat sed lectus
               vestibulum.
             </p>
+            {/* All comments */}
             <Allcomment />
           </div>
+          {/* Letest Articles here */}
           <div>
             <h2 className="text-primary font-medium text-xl px-5 pb-3">
               Letest Article
             </h2>
             <div>
+              {/* Show all products */}
               <div>
-                {allProducts
+                {blogs
                   ?.map((data) => <Blog key={data._id} data={data}></Blog>)
                   .slice(0, 6)}
               </div>
             </div>
+            {/* All tag here */}
             <div className="mt-5">
               <p className=" font-bold italic text-[16px] text-[#5A7184] mr-4">
                 Popular Tags :

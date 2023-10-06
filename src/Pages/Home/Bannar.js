@@ -10,14 +10,16 @@ const Bannar = () => {
   return (
     <div className="bg-[#F9FCFF]">
       <div className="relative ">
+        {/*  oval shape in left side */}
         <img className="absolute top-18 lg:block hidden" src={oval} alt="" />
 
         <div className="hero lg:min-h-screen py-5 md:px-10">
           <div className="hero-content flex-col lg:flex-row-reverse">
+            {/* image bannar */}
             <img className="hidden lg:block" src={bannarImage} alt="" />
-
+            {/* bannar content */}
             <div>
-              <h1 className="text-[31px] md:text-5xl  sm:px-5 lg:text-[56px] text-center md:text-left lg:leading-[68px] text-primary font-bold">
+              <h1 className="text-[31px] md:text-5xl  lg:text-[56px] px-5 py-5 text-center lg:text-left lg:leading-[68px] text-primary font-bold">
                 Read the most <br /> interesting articles
               </h1>
 
@@ -45,11 +47,11 @@ const Bannar = () => {
                 <div className="relative">
                   <input
                     type="text"
-                    className="border border-gray-300 rounded px-3 py-2 outline-none focus:border-blue-500 input input-bordered hover:border-blue-300 w-full pl-12 italic font-bold leading-[21.79px] "
+                    className="border text-primary border-gray-300 rounded px-3 py-2 outline-none focus:border-blue-500 input input-bordered hover:border-blue-300 w-full pl-12 italic font-bold leading-[21.79px] "
                     onClick={toggleMenu}
                     placeholder="Search article"
                   />
-
+                  {/* click pages dropdown */}
                   {isMenuOpen && (
                     <div className="absolute mt-2 bg-white rounded shadow-lg text-primary">
                       {/* Your menu items go here */}
@@ -66,7 +68,7 @@ const Bannar = () => {
                   Search
                 </button>
               </div>
-
+              {/* popular tag */}
               <div className="mt-5">
                 <p className=" font-bold md:inline italic text-[16px] text-[#5A7184] mr-4">
                   Popular Tags :

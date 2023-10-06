@@ -94,7 +94,7 @@ const Navbar = () => {
                 <label
                   tabIndex="0"
                   onClick={toggleHoverMenu}
-                  className="btn btn-ghost block md:hidden top-5 right-0 relative"
+                  className="btn btn-ghost block lg:hidden top-5 right-0 relative"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +118,7 @@ const Navbar = () => {
                   tabIndex="0"
                   className={`${
                     hovermenuOpen ? "block" : "hidden"
-                  } text-center absolute md:hidden top-10 bg-gray-100 right-0 border-blue-500 border-2 mt-3 p-5 shadow rounded-box`}
+                  } text-center absolute lg:hidden top-10 bg-gray-100 right-0 border-blue-500 border-2 mt-3 p-5 shadow rounded-box`}
                 >
                   {/* menu menu-compact dropdown-content  */}
                   {menuItem}
