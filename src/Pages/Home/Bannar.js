@@ -8,8 +8,8 @@ const Bannar = () => {
     setMenuOpen(!isMenuOpen);
   };
   return (
-    <div>
-      <div className="relative">
+    <div className="bg-[#F9FCFF]">
+      <div className="relative ">
         <img className="absolute top-18 lg:block hidden" src={oval} alt="" />
 
         <div className="hero lg:min-h-screen py-5 md:px-10">
@@ -17,7 +17,7 @@ const Bannar = () => {
             <img className="hidden lg:block" src={bannarImage} alt="" />
 
             <div>
-              <h1 className="sm:text-3xl md:text-2xl sm:px-5 lg:text-6xl text-center lg:text-left lg:leading-[68px] text-primary font-bold">
+              <h1 className="text-[31px] md:text-5xl  sm:px-5 lg:text-[56px] text-center md:text-left lg:leading-[68px] text-primary font-bold">
                 Read the most <br /> interesting articles
               </h1>
 

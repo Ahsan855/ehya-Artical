@@ -12,6 +12,13 @@ const CardGrid = ({ data }) => {
     verify,
     date,
   } = data;
+  const titleShorts = () => {
+    if (contentName <= 15) {
+      return contentName;
+    } else {
+      return `${contentName.slice(0, 16)}...`;
+    }
+  };
 
   return (
     <div>
@@ -21,7 +28,7 @@ const CardGrid = ({ data }) => {
       >
         <img src={image} alt="" className="w-full object-cover mb-2 rounded" />
         <div className="px-8 pb-5">
-          <h2 className="text-3xl text-primary font-bold">{contentName}</h2>
+          <h2 className="text-3xl text-primary font-bold">{titleShorts()}</h2>
           <p className="text-primary py-6 text-lg">{shortDescription}</p>
           <div className="flex items-center mt-auto justify-between">
             <div className="flex flex-row">
