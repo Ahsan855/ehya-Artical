@@ -19,11 +19,11 @@ const Bannar = () => {
             <img className="hidden lg:block" src={bannarImage} alt="" />
             {/* bannar content */}
             <div>
-              <h1 className="text-[31px] md:text-5xl  lg:text-[56px] px-5 py-5 text-center lg:text-left lg:leading-[68px] text-primary font-bold">
+              <h1 className="text-[31px] md:text-5xl  lg:text-[56px] px-5 md:pb-6 md:mb-0 text-center lg:text-left lg:leading-[68px] text-primary font-bold">
                 Read the most <br /> interesting articles
               </h1>
 
-              <p className="leading-[36px]  text-[20px] text-center lg:text-left text-primary font-normal sm:px-6">
+              <p className="leading-[36px]  text-[20px] mb-[60px] md:mb-[28px] text-center lg:text-left text-primary font-normal sm:px-6">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua
               </p>

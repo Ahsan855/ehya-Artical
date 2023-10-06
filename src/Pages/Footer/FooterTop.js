@@ -14,13 +14,13 @@ const FooterTop = () => {
             src={shape}
             alt=""
           />
-          <div className=" py-12 container mx-auto px-5 flex md:flex-col-reverse flex-col lg:flex-row md:flex-wrap">
-            <div className="lg:w-1/2 mt-36 lg:mt-5  mx-auto">
-              <h1 className="text-white text-center lg:text-left font-bold py-5 text-4xl">
-                Get our stories delivered From us <br /> to your inbox weekly.
+          <div className="md:py-12 container mx-auto px-5 flex md:flex-col-reverse flex-col lg:flex-row md:flex-wrap">
+            <div className="lg:w-1/2 px-5 mt-36 lg:mt-5  mx-auto">
+              <h1 className="text-white text-center lg:text-left font-bold mb-12 text-xl md:text-4xl">
+                Get our stories delivered From us to your inbox weekly.
               </h1>
               <div className="">
-                <div className="flex md:flex-row justify-center lg:justify-start items-center gap-2 flex-col flex-wrap my-5">
+                <div className="flex md:flex-row justify-center lg:justify-start items-center gap-2 flex-col flex-wrap mt-[14px]">
                   <input
                     type="email"
                     id="email"
@@ -32,9 +32,15 @@ const FooterTop = () => {
                     Get Started
                   </button>
                 </div>
-                <h1 className=" text-xl py-5 text-center lg:text-left text-[#5A7184] font-bold">
-                  Get a response tomorrow if you submit by 9pm today. If we
-                  received after 9pm will get a reponse the following day.
+                <h1 className=" text-[16px] leading-7 pb-5 md:px-0 px-12 mt-[14px] text-center lg:text-left text-[#5A7184] font-bold">
+                  <span className="inline-block p-1 italic md:hidden text-white">
+                    Get a response tomorrow
+                  </span>
+                  <span className="md:inline-block hidden p-1">
+                    Get a response tomorrow
+                  </span>
+                  if you submit by 9pm today. If we received after 9pm will get
+                  a reponse the following day.
                 </h1>
               </div>
             </div>

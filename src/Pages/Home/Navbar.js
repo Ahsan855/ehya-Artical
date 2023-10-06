@@ -21,14 +21,28 @@ const Navbar = () => {
 
   const menuItem = (
     <>
-      <li className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500  py-2 ">
-        <NavLink to="/">Home</NavLink>
+      <li>
+        <NavLink
+          className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500  py-2 "
+          to="/"
+        >
+          Home
+        </NavLink>
       </li>
-      <li className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500 py-2">
-        <NavLink to="/articles">Articles</NavLink>
+      <li>
+        <NavLink
+          className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500 py-2"
+          to="/articles"
+        >
+          Articles
+        </NavLink>
       </li>
-      <li className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500 py-2">
-        <NavLink to="/pages" className="relative" onClick={toggleMenu}>
+      <li>
+        <NavLink
+          to="/pages"
+          className="relative text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500 py-2"
+          onClick={toggleMenu}
+        >
           Pages
           <img
             className="absolute top-2 -right-3 md:top-3 md:-right-0"
@@ -47,11 +61,21 @@ const Navbar = () => {
           )}
         </NavLink>
       </li>
-      <li className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500 py-2">
-        <NavLink to="/pricing">Pricing</NavLink>
+      <li>
+        <NavLink
+          className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500 py-2"
+          to="/pricing"
+        >
+          Pricing
+        </NavLink>
       </li>
-      <li className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500 py-2">
-        <NavLink to="/faq">Faq</NavLink>
+      <li>
+        <NavLink
+          className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500 py-2"
+          to="/faq"
+        >
+          Faq
+        </NavLink>
       </li>
       {isLoggedIn ? (
         <li className="flex justify-center">
@@ -84,7 +108,7 @@ const Navbar = () => {
     <header className="z-50 bg-[#F9FCFF] sticky top-0">
       <div>
         <div className=" max-w-7xl mx-auto bg-[#F9FCFF]">
-          <div className=" flex justify-between items-center px-5 py-3">
+          <div className=" flex justify-between items-center px-5 py-5">
             <Link to="/">
               <img src={logo} alt="" />
             </Link>
