@@ -9,6 +9,7 @@ import Signup from "./Pages/SignUp/Signup";
 import Faq from "./Pages/Faq/Faq";
 import Login from "./Pages/Login/login";
 import Footer from "./Pages/Footer/Footer";
+import ForgetPassword from "./Pages/Login/ForgetPassword";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/reset" element={<ForgetPassword />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
       <Footer />
