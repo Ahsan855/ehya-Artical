@@ -10,6 +10,8 @@ import Faq from "./Pages/Faq/Faq";
 import Login from "./Pages/Login/login";
 import Footer from "./Pages/Footer/Footer";
 import ForgetPassword from "./Pages/Login/ForgetPassword";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
         <Route path="/reset" element={<ForgetPassword />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
+      <ToastContainer />
       <Footer />
     </div>
   );

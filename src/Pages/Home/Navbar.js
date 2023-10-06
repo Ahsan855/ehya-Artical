@@ -8,6 +8,8 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
+  const [login, setLogin] = useState(false);
+
   const menuItem = (
     <>
       <li className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500">
@@ -45,7 +47,7 @@ const Navbar = () => {
           to="/login"
           className=" px-6 py-2 bg-white border hover:text-white hover:bg-[#1565D8] border-[#1565D8] text-[16px] rounded-full font-bold text-[#1565D8]"
         >
-          Sign in
+          {login ? "login" : "LogOut"}
         </NavLink>
       </li>
     </>
