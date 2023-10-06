@@ -46,7 +46,7 @@ const FooterTop = () => {
                 </p>
               </div>
               <img
-                className="absolute top-[50px] md:left-[45px] z-[-10]"
+                className="absolute top-[50px] right-[-45px] z-[-10]"
                 src={shape1}
                 alt=""
               />

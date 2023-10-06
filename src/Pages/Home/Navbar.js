@@ -54,7 +54,7 @@ const Navbar = () => {
         <NavLink to="/faq">Faq</NavLink>
       </li>
       {isLoggedIn ? (
-        <li>
+        <li className="flex justify-center">
           <NavLink
             to="/login"
             onClick={handleToggle}
@@ -67,7 +67,7 @@ const Navbar = () => {
           </NavLink>
         </li>
       ) : (
-        <li>
+        <li className="flex justify-center">
           <NavLink
             to="/login"
             onClick={handleToggle}
