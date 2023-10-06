@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../images/Logo.png";
 import arrow from "../../images/icon/angle-down.png";
-// import { FaBars } from "react-icons/fa";
+
 const Navbar = () => {
   const [hovermenuOpen, setHoverMenuOpen] = useState(false);
 
@@ -84,47 +84,45 @@ const Navbar = () => {
     <header className="z-50 bg-[#F9FCFF] sticky top-0">
       <div>
         <div className=" max-w-7xl mx-auto bg-[#F9FCFF]">
-          <div className=" flex justify-between items-center px-5 pt-5">
+          <div className=" flex justify-between items-center px-5 py-3">
             <Link to="/">
               <img src={logo} alt="" />
             </Link>
-            <div className="">
-              <div className="dropdown">
-                {/* <FaBars /> */}
-                <label
-                  tabIndex="0"
-                  onClick={toggleHoverMenu}
-                  className="btn btn-ghost block lg:hidden top-5 right-0 relative"
+            <div className="dropdown">
+              <label
+                tabIndex="0"
+                onClick={toggleHoverMenu}
+                className="text-[#3A4C66] block lg:hidden relative"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-auto"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      // d="M4 6h16M4 12h8m-8 6h16"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                </label>
-                <ul
-                  tabIndex="0"
-                  className={`${
-                    hovermenuOpen ? "block" : "hidden"
-                  } text-center absolute lg:hidden top-10 bg-gray-100 right-0 border-blue-500 border-2 mt-3 p-5 shadow rounded-box`}
-                >
-                  {/* menu menu-compact dropdown-content  */}
-                  {menuItem}
-                </ul>
-              </div>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    // d="M4 6h16M4 12h8m-8 6h16"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </label>
+              <ul
+                tabIndex="0"
+                className={`${
+                  hovermenuOpen ? "block" : "hidden"
+                } text-center absolute lg:hidden top-10 bg-gray-100 right-0 border-blue-500 border-2 mt-3 p-5 shadow rounded-box`}
+              >
+                {/* menu menu-compact dropdown-content  */}
+                {menuItem}
+              </ul>
             </div>
+
             <div className="navbar-end  hidden lg:flex">
               <ul className="menu menu-horizontal p-0 gap-y-5">{menuItem}</ul>
             </div>

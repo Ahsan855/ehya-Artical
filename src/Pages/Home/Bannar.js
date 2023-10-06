@@ -13,7 +13,7 @@ const Bannar = () => {
         {/*  oval shape in left side */}
         <img className="absolute top-18 lg:block hidden" src={oval} alt="" />
 
-        <div className="hero lg:min-h-screen py-5 md:px-10">
+        <div className="hero lg:min-h-screen md:px-10">
           <div className="hero-content flex-col lg:flex-row-reverse">
             {/* image bannar */}
             <img className="hidden lg:block" src={bannarImage} alt="" />

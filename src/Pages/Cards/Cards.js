@@ -14,7 +14,7 @@ const Cards = () => {
   }, []);
   return (
     <div>
-      <div className="grid pt-5 max-w-7xl mx-auto lg:grid-cols-3 gap-5 md:grid-cols-2 grid-cols-1 px-5 md:px-16">
+      <div className="grid max-w-7xl mx-auto lg:grid-cols-3 gap-5 md:grid-cols-2 grid-cols-1 px-5 md:px-16">
         {allProducts?.map((data) => (
           <CardGrid key={data._id} data={data}></CardGrid>
         ))}
