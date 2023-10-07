@@ -7,11 +7,11 @@ import shape from "../../images/Wave.svg";
 const FooterTop = () => {
   return (
     <>
-      <img className="w-full h-auto  md:visible hidden" src={shape} alt="" />
+      <img className="w-full h-auto hidden md:block " src={shape} alt="" />
       <div className=" bg-[#0D2436]">
         <div>
           <div className="md:py-12 container mx-auto px-5 flex items-center md:flex-col-reverse flex-col lg:flex-row md:flex-wrap">
-            <div className="lg:w-1/2 px-5 mt-20 md:mt-36 lg:mt-0 mx-auto">
+            <div className="lg:w-1/2 px-0 md:px-5 mt-20 md:mt-36 lg:mt-0 mx-auto">
               <h1 className="text-white md:text-center text-left pr-7 lg:text-left font-bold mb-12 text-2xl md:text-4xl">
                 Get our stories delivered From us to your inbox weekly.
               </h1>

@@ -9,11 +9,17 @@ const Bannar = () => {
   };
   return (
     <div className="bg-[#F9FCFF]">
-      <div className="relative ">
+      <div>
         {/*  oval shape in left side */}
-        <img className="absolute top-18 lg:block hidden" src={oval} alt="" />
+        {/* <img className="absolute top-18 lg:block hidden" src={oval} alt="" /> */}
 
-        <div className="hero lg:min-h-screen md:px-10">
+        <div className="hero relative py-5 md:px-10">
+          <img
+            className="absolute -bottom-12 left-14 lg:block hidden"
+            src={oval}
+            alt=""
+          />
+
           <div className="hero-content flex-col lg:flex-row-reverse">
             {/* image bannar */}
             <img className="hidden lg:block" src={bannarImage} alt="" />
@@ -23,7 +29,7 @@ const Bannar = () => {
                 Read the most <br /> interesting articles
               </h1>
 
-              <p className="leading-[36px] text-[16px] pt-4 md:pt-7 md:text-[20px] mb-[60px] md:mb-[28px] text-center lg:text-left text-primary font-normal px-5 md:px-44 lg:px-0">
+              <p className="leading-[36px] text-[16px] pt-4 md:pt-7 md:text-[20px] mb-[60px] md:mb-[28px] text-center lg:text-left text-primary font-normal px-5 md:px-20 lg:px-0">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua
               </p>
