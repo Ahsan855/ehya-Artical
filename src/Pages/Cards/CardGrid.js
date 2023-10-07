@@ -29,11 +29,13 @@ const CardGrid = ({ data }) => {
         <img src={image} alt="" className="w-full object-cover mb-2 rounded" />
         <div className="px-8 pb-5">
           <h2
-            className={`text-3xl text-primary font-bold hove:text-[${contentName}]`}
+            className={`text-[20px] md:text-[24px] lg:text-[28px] text-primary font-bold hove:text-[${contentName}]`}
           >
             {titleShorts()}
           </h2>
-          <p className="text-primary py-6 text-lg">{shortDescription}</p>
+          <p className="text-primary py-6 text-[14px] md:text-[18px]">
+            {shortDescription}
+          </p>
           <div className="flex items-center mt-auto justify-between">
             <div className="flex flex-row">
               <img
@@ -43,7 +45,7 @@ const CardGrid = ({ data }) => {
               />
 
               <div>
-                <p className="text-[16px] text-primary font-bold italic">
+                <p className="text-[14px] md:text-[16px] text-primary font-bold italic">
                   {userName}
                 </p>
                 <div className="flex felx-row items-center">
@@ -57,7 +59,7 @@ const CardGrid = ({ data }) => {
               </div>
             </div>
 
-            <p className="text-[16px] text-[#5A7184] font-bold italic">
+            <p className="text-[14px] md:text-[16px] text-[#5A7184] font-bold italic">
               {date}
             </p>
           </div>

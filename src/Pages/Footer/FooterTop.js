@@ -7,16 +7,12 @@ import shape from "../../images/Wave.svg";
 const FooterTop = () => {
   return (
     <>
+      <img className="w-full h-auto  md:visible hidden" src={shape} alt="" />
       <div className=" bg-[#0D2436]">
-        <div className="relative">
-          <img
-            className="absolute -top-10 md:-top-20 lg:-top-28 left-0 w-full h-auto"
-            src={shape}
-            alt=""
-          />
-          <div className="md:py-12 container mx-auto px-5 flex md:flex-col-reverse flex-col lg:flex-row md:flex-wrap">
-            <div className="lg:w-1/2 px-5 mt-36 lg:mt-5  mx-auto">
-              <h1 className="text-white text-center lg:text-left font-bold mb-12 text-xl md:text-4xl">
+        <div>
+          <div className="md:py-12 container mx-auto px-5 flex items-center md:flex-col-reverse flex-col lg:flex-row md:flex-wrap">
+            <div className="lg:w-1/2 px-5 mt-20 md:mt-36 lg:mt-0 mx-auto">
+              <h1 className="text-white md:text-center text-left pr-7 lg:text-left font-bold mb-12 text-2xl md:text-4xl">
                 Get our stories delivered From us to your inbox weekly.
               </h1>
               <div className="">
@@ -32,11 +28,11 @@ const FooterTop = () => {
                     Get Started
                   </button>
                 </div>
-                <h1 className=" text-[16px] leading-7 pb-5 md:px-0 px-12 mt-[14px] text-center lg:text-left text-[#5A7184] font-bold">
+                <h1 className=" text-[16px] leading-7 pb-5 px-0 md:px-12 lg:pl-3 mt-[14px] text-left md:text-center lg:text-left text-[#5A7184] font-bold">
                   <span className="inline-block p-1 italic md:hidden text-white">
                     Get a response tomorrow
                   </span>
-                  <span className="md:inline-block hidden p-1">
+                  <span className="md:inline-block  hidden p-1">
                     Get a response tomorrow
                   </span>
                   if you submit by 9pm today. If we received after 9pm will get
