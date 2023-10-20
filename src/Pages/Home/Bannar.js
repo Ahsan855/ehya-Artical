@@ -61,11 +61,11 @@ const Bannar = () => {
                   {isMenuOpen && (
                     <div className="absolute mt-2 bg-white rounded shadow-lg text-primary">
                       {/* Your menu items go here */}
-                      <ul>
-                        <li className="p-2">Article 1</li>
-                        <li className="p-2">Article 2</li>
-                        <li className="p-2">Article 3</li>
-                      </ul>
+                      <div>
+                        <p className="p-2">Article 1</p>
+                        <p className="p-2">Article 2</p>
+                        <p className="p-2">Article 3</p>
+                      </div>
                     </div>
                   )}
                 </div>

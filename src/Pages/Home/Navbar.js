@@ -1,17 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../images/Logo.png";
 import arrow from "../../images/icon/angle-down.png";
 
 const Navbar = () => {
-  const [hovermenuOpen, setHoverMenuOpen] = useState(false);
-
-  const toggleHoverMenu = () => {
-    setHoverMenuOpen(!hovermenuOpen);
-  };
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  // For Menu
+  const ref = useRef();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      if (isMenuOpen && ref.current && !ref.current.contains(e.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", checkIfClickedOutside);
+    return () => {
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+    };
+  }, [isMenuOpen]);
+  // Article menu
+  const [isMenuOpens, setMenuOpen] = useState(false);
   const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
+    setMenuOpen(!isMenuOpens);
   };
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -23,7 +33,14 @@ const Navbar = () => {
     <>
       <li>
         <NavLink
-          className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500  py-2 "
+          // className={({ isActive }) => (`cursor-pointer rounded-md text-[15px] flex items-center gap-3 hover:text-purple-500 font-semibold  ${isActive ? 'text-purple-500' : 'text-gray-700'}`)}
+          className={({ isActive }) =>
+            `transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue px-5 rounded-lg  hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500  py-2 ${
+              isActive
+                ? "text-gray-600 font-bold border-b-2 border-b-blue-500"
+                : "text-primary"
+            } `
+          }
           to="/"
         >
           Home
@@ -31,7 +48,13 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500 py-2"
+          className={({ isActive }) =>
+            `transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue px-5 rounded-lg  hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500  py-2 ${
+              isActive
+                ? "text-gray-600 font-bold border-b-2 border-b-blue-500"
+                : "text-primary"
+            } `
+          }
           to="/articles"
         >
           Articles
@@ -40,7 +63,13 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/pages"
-          className="relative text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500 py-2"
+          className={({ isActive }) =>
+            `transition duration-300 ease-in-out relative transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue px-5 rounded-lg  hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500  py-2 ${
+              isActive
+                ? "text-gray-600 font-bold border-b-2 border-b-blue-500"
+                : "text-primary"
+            } `
+          }
           onClick={toggleMenu}
         >
           Pages
@@ -49,8 +78,8 @@ const Navbar = () => {
             src={arrow}
             alt=""
           />
-          {isMenuOpen && (
-            <div className="absolute top-6 mt-2 bg-white text-primary rounded shadow-lg">
+          {isMenuOpens && (
+            <div className="absolute top-8 mt-2 bg-white text-primary rounded shadow-lg">
               {/* Your menu items go here */}
               <ul>
                 <li className="p-2">Article 1</li>
@@ -63,7 +92,13 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500 py-2"
+          className={({ isActive }) =>
+            `transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue px-5 rounded-lg  hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500  py-2 ${
+              isActive
+                ? "text-gray-600 font-bold border-b-2 border-b-blue-500"
+                : "text-primary"
+            } `
+          }
           to="/pricing"
         >
           Pricing
@@ -71,7 +106,13 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          className="text-primary transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue active:bg-blue-700 hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500 py-2"
+          className={({ isActive }) =>
+            `transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:shadow-outline-blue px-5 rounded-lg  hover:text-blue-500 font-semibold hover:border-b-2 hover:border-b-blue-500  py-2 ${
+              isActive
+                ? "text-gray-600 font-bold border-b-2 border-b-blue-500"
+                : "text-primary"
+            } `
+          }
           to="/faq"
         >
           Faq
@@ -113,42 +154,70 @@ const Navbar = () => {
               <img src={logo} alt="" />
             </Link>
             <div className="dropdown">
-              <label
-                tabIndex="0"
-                onClick={toggleHoverMenu}
-                className="text-[#3A4C66] block lg:hidden relative"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-auto"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
+              {/* For Mobile */}
+              <div className="flex h-full items-center justify-between lg:hidden">
+                {/* cancle button */}
+                <button
+                  type="button"
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  className="p-2 md:mr-4 rounded-md lg:hidden text-primary"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    // d="M4 6h16M4 12h8m-8 6h16"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </label>
+                  <svg
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                    className="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              {/* Mobile toggole button */}
               <ul
                 tabIndex="0"
+                ref={ref}
                 className={`${
-                  hovermenuOpen ? "block" : "hidden"
-                } text-center absolute lg:hidden top-10 bg-gray-100 right-0 border-blue-500 border-2 mt-3 p-5 shadow rounded-box`}
+                  isMenuOpen
+                    ? "right-0 bottom-0 top-0 z-20"
+                    : "-right-96 bottom-0 top-0"
+                } transition-all duration-300 ease-in-out fixed lg:hidden  flex flex-col  md:w-1/2 w-8/12 h-1/2 py-6 px-6 bg-gray-200 border-r overflow-y-auto`}
               >
-                {/* menu menu-compact dropdown-content  */}
-                {menuItem}
+                <div className="h-full flex flex-col gap-3  items-start pl-1">
+                  <div className=" flex justify-end items-end w-full">
+                    <button onClick={() => setIsMenuOpen(false)}>
+                      <svg
+                        className="h-6 w-6 text-primary cursor-pointer hover:text-gray-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M6 18L18 6M6 6l12 12"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+
+                  {/* menu menu-compact dropdown-content  */}
+                  {menuItem}
+                </div>
               </ul>
             </div>
-
+            {/* Desktop */}
             <div className="navbar-end  hidden lg:flex">
-              <ul className="menu menu-horizontal p-0 gap-y-5">{menuItem}</ul>
+              <ul className="flex flex-row gap-x-4 justify-end items-center p-0 gap-y-5">
+                {menuItem}
+              </ul>
             </div>
           </div>
         </div>
