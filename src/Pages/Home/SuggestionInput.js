@@ -4,13 +4,7 @@ const SuggestionInput = () => {
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false); // New state to track visibility
-  const suggestionList = [
-    "Articles",
-    "Suggestions",
-    "Experince",
-    "Interface",
-    "comments",
-  ];
+  const suggestionList = ["Articles", "Suggestions", "Experince", "Interface"];
   const inputRef = useRef(null); // Ref for the input element
 
   const handleInputChange = (e) => {
@@ -58,11 +52,11 @@ const SuggestionInput = () => {
         onChange={handleInputChange}
       />
       {showSuggestions && suggestions.length > 0 && (
-        <ul className="absolute z-10 bg-white border p-2 mt-2 shadow rounded w-full">
+        <ul className="absolute bg-white border p-2 mt-2 shadow rounded w-full">
           {suggestions.map((suggestion) => (
             <li
               key={suggestion}
-              className="cursor-pointer hover:bg-gray-100 p-1"
+              className="cursor-pointer hover:bg-gray-100 text-primary font-semibold p-1"
               onClick={() => handleSuggestionClick(suggestion)}
             >
               {suggestion}

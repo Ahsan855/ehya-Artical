@@ -46,7 +46,7 @@ const Bannar = () => {
                   />
                 </svg>
 
-                <div className="relative">
+                <div className="relative z-10">
                   {/* click pages dropdown */}
                   <SuggestionInput />
                 </div>
