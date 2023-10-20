@@ -1,12 +1,8 @@
 import bannarImage from "../../images/Bannar_Live_chat.svg";
-import React, { useState } from "react";
 import oval from "../../images/Oval.svg";
+import SuggestionInput from "./SuggestionInput";
 
 const Bannar = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
   return (
     <div className="bg-[#F9FCFF]">
       <div>
@@ -51,23 +47,8 @@ const Bannar = () => {
                 </svg>
 
                 <div className="relative">
-                  <input
-                    type="text"
-                    className="border text-primary border-gray-300 rounded px-3 py-2 outline-none focus:border-blue-500 input input-bordered hover:border-blue-300 w-full pl-12 italic font-bold leading-[21.79px] "
-                    onClick={toggleMenu}
-                    placeholder="Search article"
-                  />
                   {/* click pages dropdown */}
-                  {isMenuOpen && (
-                    <div className="absolute mt-2 bg-white rounded shadow-lg text-primary">
-                      {/* Your menu items go here */}
-                      <div>
-                        <p className="p-2">Article 1</p>
-                        <p className="p-2">Article 2</p>
-                        <p className="p-2">Article 3</p>
-                      </div>
-                    </div>
-                  )}
+                  <SuggestionInput />
                 </div>
 
                 <button className="w-full px-5 sm:text-center border-2  hover:text-[#1565D8] hover:bg-white md:w-[94px] h-[40px] bg-[#1565D8] text-[16px] font-bold text-white mt-5 md:absolute md:mt-0 top-1 right-2 rounded-lg">

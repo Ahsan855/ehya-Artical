@@ -138,7 +138,7 @@ const Navbar = () => {
             onClick={handleToggle}
             className=" px-6 py-2 bg-white border hover:text-white hover:bg-[#1565D8] border-[#1565D8] tex-[16px] rounded-full font-bold text-[#1565D8]"
           >
-            SignOut
+            Sign Out
           </NavLink>
         </li>
       )}
