@@ -96,7 +96,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="text-center pt-5 bg-[#0D2436] text-[#959EAD]">
+      <div className="text-center pt-5 bg-[#0D2436] hidden md:block text-[#959EAD]">
         <img className="mx-auto my-5" src={loveImage} alt="" />
         <p className="text-center font-bold text-[16px] italic">
           Copyright © 2023. Crafted with love.
